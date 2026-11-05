@@ -169,6 +169,7 @@ function flAufloesung(land, ergebnis, gewaehlt, weiter) {
       flFakt("Region", land.region),
       flFakt("Hauptstadt", land.hauptstadt),
       flFakt("Einwohner", land.einwohnerText),
+      flFakt("Fläche", land.flaecheText),
     ),
     flKarteSvg(land.iso),
   );

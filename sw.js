@@ -1,5 +1,5 @@
 // Offline-Unterstützung: App-Hülle und gesehene Bilder bleiben auf dem Gerät.
-const VERSION = "tiefgang-2";
+const VERSION = "tiefgang-3";
 const HUELLE = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "inhalte.json", "flaggen.js", "flaggen.json", "karte.json", "icons/icon-180.png"];
 
 self.addEventListener("install", (e) => {
