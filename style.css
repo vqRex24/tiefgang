@@ -98,3 +98,71 @@ a { color: inherit; }
 @media (max-height: 620px) { .merke { display: none; } .bild, .bild-verlauf { height: 42%; } }
 @media (prefers-reduced-motion: reduce) { .blatt[open] { animation: none; } }
 @media (min-width: 700px) { .koerper { max-width: 620px; margin-inline: auto; width: 100%; } }
+
+/* Flaggen */
+:root { --flaggen: #b79cf2; --gut: #4cc38a; --schlecht: #ff6b5b; }
+.karte[data-kat="flaggen"] { --farbe: var(--flaggen); }
+.flaggen { height: 100dvh; overflow-y: auto; padding: calc(var(--oben) + 22px) 16px calc(var(--leiste) + 20px); }
+.flaggen h1 { font-family: var(--serif); font-size: 30px; margin: 0 0 4px; }
+.flaggen .bilanz { margin-bottom: 10px; }
+.fl-balken { height: 8px; border-radius: 4px; background: var(--linie); overflow: hidden; margin-bottom: 16px; }
+.fl-balken span { display: block; height: 100%; background: var(--flaggen); }
+.fl-start { width: 100%; margin-bottom: 20px; min-height: 50px; }
+.fl-raster { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(62px, 1fr)); gap: 8px; }
+.fl-kachel { display: grid; place-items: center; width: 100%; aspect-ratio: 4 / 3; border-radius: 6px; background: var(--flaeche); overflow: hidden; }
+.fl-kachel img { width: 100%; height: 100%; object-fit: contain; }
+.fl-kachel.unbekannt { color: var(--leise); font-weight: 650; }
+.fl-kachel.lernt { opacity: .62; }
+.fl-kachel.sicher { outline: 2px solid var(--gut); outline-offset: -2px; }
+
+.fl-rundenkopf { display: flex; justify-content: space-between; align-items: center; color: var(--leise); font-size: 14px; margin-bottom: 12px; }
+.fl-abbruch { min-height: 44px; padding: 0 4px 0 16px; font-weight: 600; color: var(--text); }
+.fl-aufgabe { margin: 0 0 12px; font-family: var(--serif); font-size: 24px; font-weight: 700; line-height: 1.15; }
+.fl-name { margin: -6px 0 14px; font-family: var(--serif); font-size: 30px; font-weight: 700; color: var(--flaggen); line-height: 1.1; }
+.fl-gross { display: block; width: 100%; max-height: 38dvh; object-fit: contain; object-position: left; margin-bottom: 16px; }
+.fl-optionen { display: grid; gap: 8px; }
+.fl-optionen.mit-bild { grid-template-columns: 1fr 1fr; }
+.fl-option { min-height: 52px; padding: 8px 14px; border-radius: 10px; background: var(--flaeche); border: 2px solid var(--linie); font-size: 16px; font-weight: 600; text-align: left; }
+.mit-bild .fl-option { display: grid; place-items: center; padding: 8px; aspect-ratio: 4 / 3; }
+.mit-bild .fl-option img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.fl-option:disabled { opacity: .55; cursor: default; }
+.fl-option.richtig { border-color: var(--gut); opacity: 1; }
+.fl-option.falsch { border-color: var(--schlecht); opacity: 1; }
+.fl-option.richtig span::after { content: " ✓"; color: var(--gut); }
+.fl-option.falsch span::after { content: " ✕"; color: var(--schlecht); }
+.mit-bild .fl-option.richtig { box-shadow: inset 0 0 0 2px var(--gut); }
+.mit-bild .fl-option.falsch { box-shadow: inset 0 0 0 2px var(--schlecht); }
+.fl-feedkarte { justify-content: center; }
+.fl-feedkarte .koerper { padding: calc(var(--oben) + 62px) 18px calc(var(--leiste) + 14px); width: 100%; }
+.fl-feedkarte .fl-gross { max-height: 30dvh; }
+.fl-nochmal { margin-top: 14px; }
+.fl-ende { padding-top: 12dvh; text-align: center; }
+
+.fl-ergebnis { font-size: 15px !important; font-weight: 700; margin: 0 44px 12px 0 !important; }
+.fl-ergebnis.gut { color: var(--gut); }
+.fl-ergebnis.schlecht { color: var(--schlecht); }
+.fl-vergleich { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+.fl-vergleich figure { margin: 0; }
+.fl-vergleich img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; }
+.fl-vergleich figcaption { font-size: 13px; color: var(--leise); margin-top: 4px; line-height: 1.3; }
+.fl-fakten { margin: 0 0 16px; }
+.fl-fakt { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-bottom: 1px solid var(--linie); font-size: 15.5px; }
+.fl-fakt dt { color: var(--leise); }
+.fl-fakt dd { margin: 0; text-align: right; font-weight: 600; }
+.landkarte { display: block; width: 100%; border-radius: 10px; background: #12202c; margin-bottom: 14px; }
+.kl-land { fill: #3a3e45; stroke: #12202c; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.kl-ziel { fill: var(--flaggen); stroke: #fff; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.kl-ring { fill: none; stroke: var(--flaggen); stroke-width: 2.5; vector-effect: non-scaling-stroke; }
+.fl-karteninfo { font-size: 14px !important; color: var(--leise); margin: 0 0 8px !important; }
+.fl-weiter { position: sticky; bottom: 0; width: 100%; margin-top: 18px; min-height: 50px; box-shadow: 0 0 0 10px var(--flaeche); }
+.fl-feedkarte .fl-frage .landkarte { max-height: 36dvh; }
+
+@media (max-height: 700px) {
+  .fl-feedkarte .koerper { padding-top: calc(var(--oben) + 54px); padding-bottom: calc(var(--leiste) + 8px); }
+  .fl-feedkarte .fl-frage .landkarte { max-height: 27dvh; margin-bottom: 8px; }
+  .fl-feedkarte .fl-gross { max-height: 24dvh; margin-bottom: 10px; }
+  .fl-aufgabe { font-size: 21px; margin-bottom: 8px; }
+  .fl-feedkarte .marke { margin-bottom: 4px; }
+  .fl-option { min-height: 46px; padding: 6px 12px; }
+  .fl-optionen { gap: 6px; }
+}
