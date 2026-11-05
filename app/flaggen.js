@@ -213,7 +213,8 @@ function flUebersicht() {
     }, el("img", { src: flBild(l.iso), alt: "" })));
   }));
   flBereich().replaceChildren(
-    el("h1", { text: "Flaggen" }),
+    zurueckKnopf(),
+    el("h1", { text: "Flaggen Europa" }),
     el("p", { class: "bilanz", text: `Europa: ${flSicher()} von ${flLaender.length} sicher` }),
     el("div", { class: "fl-balken", role: "img", "aria-label": `${flSicher()} von ${flLaender.length} sicher` },
       el("span", { style: `width:${(flSicher() / flLaender.length) * 100}%` })),

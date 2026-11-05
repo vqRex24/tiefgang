@@ -1,6 +1,6 @@
 // Offline-Unterstützung: App-Hülle und gesehene Bilder bleiben auf dem Gerät.
-const VERSION = "tiefgang-3";
-const HUELLE = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "inhalte.json", "flaggen.js", "flaggen.json", "karte.json", "icons/icon-180.png"];
+const VERSION = "tiefgang-4";
+const HUELLE = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "inhalte.json", "flaggen.js", "flaggen.json", "quiz.js", "quiz.json", "karte.json", "icons/icon-180.png"];
 
 self.addEventListener("install", (e) => {
   // Alle Flaggen gleich mitspeichern, damit das Quiz auch ohne Netz läuft.
