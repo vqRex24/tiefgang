@@ -1,0 +1,100 @@
+:root {
+  --grund: #0e0f11;
+  --flaeche: #191b1f;
+  --linie: #2b2e34;
+  --text: #f4f2ed;
+  --leise: #b4b3ad;
+  --aktuell: #ff6b5b;
+  --weltkriege: #e8a94a;
+  --geschichte: #d9c58b;
+  --bauwerke: #5fc4b0;
+  --politik: #7fa8f0;
+  --serif: ui-serif, "New York", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  --oben: env(safe-area-inset-top, 0px);
+  --unten: env(safe-area-inset-bottom, 0px);
+  --leiste: calc(52px + var(--unten));
+  color-scheme: dark;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; background: var(--grund); color: var(--text); font-family: var(--sans); overflow: hidden; overscroll-behavior: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+a { color: inherit; }
+[hidden] { display: none !important; }
+
+/* Themen oben */
+.kopf { position: fixed; inset: 0 0 auto 0; z-index: 5; padding: calc(var(--oben) + 10px) 0 18px; background: linear-gradient(rgba(14,15,17,.82), rgba(14,15,17,0)); pointer-events: none; }
+.chips { display: flex; gap: 6px; overflow-x: auto; padding: 0 16px; scrollbar-width: none; pointer-events: auto; }
+.chips::-webkit-scrollbar { display: none; }
+.chip { flex: none; min-height: 34px; padding: 0 13px; border-radius: 17px; font-size: 14px; font-weight: 600; color: var(--text); background: rgba(40,42,47,.72); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.chip[aria-pressed="true"] { background: var(--text); color: var(--grund); }
+
+/* Feed */
+.feed { height: 100dvh; overflow-y: scroll; scroll-snap-type: y mandatory; overscroll-behavior: contain; scrollbar-width: none; outline: 0; }
+.feed::-webkit-scrollbar { display: none; }
+.karte { --farbe: var(--text); position: relative; height: 100dvh; scroll-snap-align: start; scroll-snap-stop: always; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; background: var(--grund); }
+.karte[data-kat="aktuell"] { --farbe: var(--aktuell); }
+.karte[data-kat="weltkriege"] { --farbe: var(--weltkriege); }
+.karte[data-kat="geschichte"] { --farbe: var(--geschichte); }
+.karte[data-kat="bauwerke"] { --farbe: var(--bauwerke); }
+.karte[data-kat="politik"] { --farbe: var(--politik); }
+
+.bild { position: absolute; inset: 0 0 auto 0; height: 58%; width: 100%; object-fit: cover; background: var(--flaeche); }
+.bild-verlauf { position: absolute; inset: 0 0 auto 0; height: 58%; background: linear-gradient(rgba(14,15,17,.1) 45%, var(--grund)); }
+.karte.ohne-bild::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 60%; background: radial-gradient(120% 90% at 15% 0%, color-mix(in srgb, var(--farbe) 30%, transparent), transparent 70%); }
+
+.koerper { position: relative; padding: 0 72px calc(var(--leiste) + 18px) 18px; }
+.marke { display: flex; flex-wrap: wrap; gap: 4px 8px; font-size: 13px; font-weight: 650; color: var(--farbe); margin-bottom: 8px; }
+.marke .serie { color: var(--leise); font-weight: 500; }
+.karte h2 { margin: 0 0 10px; font-family: var(--serif); font-size: clamp(25px, 7.4vw, 31px); line-height: 1.12; font-weight: 700; letter-spacing: -.01em; text-wrap: balance; }
+.hook { margin: 0 0 12px; font-size: 16.5px; line-height: 1.42; }
+.merke { margin: 0 0 14px; padding-left: 11px; border-left: 2px solid var(--farbe); font-size: 14.5px; line-height: 1.4; color: var(--leise); }
+.mehr { min-height: 44px; padding: 0 16px; border-radius: 22px; font-size: 15px; font-weight: 650; background: var(--text); color: var(--grund); }
+
+.aktionen { position: absolute; right: 10px; bottom: calc(var(--leiste) + 18px); display: flex; flex-direction: column; gap: 6px; }
+.aktion { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 24px; background: rgba(40,42,47,.72); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.aktion[aria-pressed="true"] { color: var(--farbe); }
+.aktion[aria-pressed="true"] svg { fill: currentColor; }
+.aktion svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+
+.ende { justify-content: center; text-align: center; padding: 0 28px var(--leiste); align-items: center; }
+.ende h2 { max-width: 13em; }
+.ende p { color: var(--leise); margin: 0 0 18px; line-height: 1.45; }
+
+/* Untere Leiste */
+.leiste { position: fixed; inset: auto 0 0 0; z-index: 5; height: var(--leiste); padding-bottom: var(--unten); display: flex; background: rgba(14,15,17,.92); border-top: 1px solid var(--linie); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
+.leiste button { flex: 1; font-size: 14px; font-weight: 600; color: var(--leise); }
+.leiste button.aktiv { color: var(--text); }
+
+/* Merkliste */
+.merkliste { height: 100dvh; overflow-y: auto; padding: calc(var(--oben) + 22px) 16px calc(var(--leiste) + 20px); }
+.merkliste h1 { font-family: var(--serif); font-size: 30px; margin: 0 0 4px; }
+.bilanz { color: var(--leise); margin: 0 0 18px; font-size: 14.5px; }
+.zeilen { list-style: none; margin: 0; padding: 0; }
+.zeile { display: flex; gap: 12px; align-items: center; width: 100%; padding: 10px 0; text-align: left; border-bottom: 1px solid var(--linie); }
+.zeile img, .zeile .platz { flex: none; width: 58px; height: 58px; border-radius: 8px; object-fit: cover; background: var(--flaeche); }
+.zeile strong { display: block; font-family: var(--serif); font-size: 17px; line-height: 1.2; }
+.zeile span { display: block; margin-top: 3px; font-size: 13px; color: var(--leise); }
+.leer { color: var(--leise); line-height: 1.5; padding: 24px 0; }
+
+/* Detailblatt */
+.blatt { width: 100%; max-width: 640px; height: 88dvh; max-height: none; margin: auto auto 0; padding: 0; border: 0; border-radius: 18px 18px 0 0; background: var(--flaeche); color: var(--text); overflow: hidden; }
+.blatt::backdrop { background: rgba(0,0,0,.6); }
+.blatt[open] { animation: hoch .24s cubic-bezier(.2,.8,.2,1); }
+@keyframes hoch { from { transform: translateY(40px); opacity: 0; } }
+.zu { position: absolute; top: 8px; right: 8px; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 22px; background: rgba(14,15,17,.7); }
+.blatt-inhalt { height: 100%; overflow-y: auto; padding: 22px 18px calc(var(--unten) + 28px); -webkit-overflow-scrolling: touch; }
+.blatt-inhalt h2 { font-family: var(--serif); font-size: 26px; line-height: 1.15; margin: 8px 44px 16px 0; text-wrap: balance; }
+.blatt-inhalt p { font-size: 17px; line-height: 1.55; margin: 0 0 14px; }
+.blatt-inhalt .merkkasten { margin: 20px 0; padding: 14px; border-radius: 10px; background: var(--grund); }
+.merkkasten b { display: block; font-size: 13px; color: var(--leise); margin-bottom: 4px; }
+.merkkasten p { margin: 0; font-size: 16px; line-height: 1.45; }
+.blatt-inhalt h3 { font-size: 13px; color: var(--leise); margin: 22px 0 6px; }
+.quellen { list-style: none; margin: 0; padding: 0; }
+.quellen a { display: flex; align-items: center; min-height: 44px; font-size: 15px; border-bottom: 1px solid var(--linie); text-underline-offset: 3px; }
+.nachweis { font-size: 13px; line-height: 1.45; color: var(--leise); margin-top: 16px; }
+
+@media (min-height: 760px) { .hook { font-size: 17.5px; } .merke { font-size: 15px; } }
+@media (max-height: 620px) { .merke { display: none; } .bild, .bild-verlauf { height: 42%; } }
+@media (prefers-reduced-motion: reduce) { .blatt[open] { animation: none; } }
+@media (min-width: 700px) { .koerper { max-width: 620px; margin-inline: auto; width: 100%; } }
