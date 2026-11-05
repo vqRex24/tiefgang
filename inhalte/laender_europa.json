@@ -1,0 +1,696 @@
+[
+{
+"iso": "de",
+"name": "Deutschland",
+"hauptstadt": "Berlin",
+"region": "Mitteleuropa",
+"commons": "Flag of Germany.svg",
+"wiki": "Flagge Deutschlands",
+"aehnlich": [
+"be",
+"at",
+"ee"
+],
+"bedeutung": "Schwarz, Rot und Gold gehen auf die Uniformen des Lützowschen Freikorps in den Befreiungskriegen zurück. Beim Hambacher Fest 1832 wurden sie zum Zeichen für Einheit und Freiheit.",
+"esel": "Waagerecht von dunkel nach hell. Belgien hat dieselben Farben, aber senkrecht."
+},
+{
+"iso": "fr",
+"name": "Frankreich",
+"hauptstadt": "Paris",
+"region": "Westeuropa",
+"commons": "Flag of France.svg",
+"wiki": "Flagge Frankreichs",
+"aehnlich": [
+"nl",
+"lu",
+"it"
+],
+"bedeutung": "Die Trikolore stammt aus der Französischen Revolution. Blau und Rot sind die Farben von Paris, Weiß war die Farbe des Königshauses.",
+"esel": "Dieselben Farben wie die Niederlande, aber senkrecht."
+},
+{
+"iso": "it",
+"name": "Italien",
+"hauptstadt": "Rom",
+"region": "Südeuropa",
+"commons": "Flag of Italy.svg",
+"wiki": "Flagge Italiens",
+"aehnlich": [
+"ie",
+"hu",
+"fr"
+],
+"bedeutung": "Die grün-weiß-rote Trikolore führte 1797 die von Napoleon geförderte Cispadanische Republik ein, nach dem Vorbild der französischen.",
+"esel": "Wie eine Pizza Margherita: Basilikum, Mozzarella, Tomate."
+},
+{
+"iso": "es",
+"name": "Spanien",
+"hauptstadt": "Madrid",
+"region": "Südeuropa",
+"commons": "Flag of Spain.svg",
+"wiki": "Flagge Spaniens",
+"aehnlich": [
+"ad",
+"pt",
+"ro"
+],
+"bedeutung": "König Karl III. führte Rot und Gelb 1785 für die Kriegsflotte ein, weil die Farben auf See gut zu erkennen waren. Der gelbe Streifen ist doppelt so breit wie die roten.",
+"esel": "Viel Sonne in der Mitte: ein breiter gelber Streifen zwischen zwei roten."
+},
+{
+"iso": "gb",
+"name": "Vereinigtes Königreich",
+"hauptstadt": "London",
+"region": "Westeuropa",
+"commons": "Flag of the United Kingdom.svg",
+"wiki": "Flagge des Vereinigten Königreichs",
+"aehnlich": [
+"is",
+"no",
+"fr"
+],
+"bedeutung": "Der Union Jack legt drei Kreuze übereinander: Sankt Georg für England, Sankt Andreas für Schottland und Sankt Patrick für Irland. Wales ist nicht vertreten.",
+"esel": "Drei Kreuze für drei Landesteile, darum wirkt die Flagge so voll."
+},
+{
+"iso": "ch",
+"name": "Schweiz",
+"hauptstadt": "Bern (Bundesstadt)",
+"region": "Mitteleuropa",
+"commons": "Flag of Switzerland.svg",
+"wiki": "Flagge der Schweiz",
+"aehnlich": [
+"dk",
+"mt",
+"at"
+],
+"bedeutung": "Das weiße Kreuz auf Rot geht auf Feldzeichen der Eidgenossen zurück. Die Flagge ist quadratisch, das gibt es sonst nur beim Vatikan.",
+"esel": "Das Rote Kreuz wurde in Genf gegründet und nutzt die umgekehrten Farben."
+},
+{
+"iso": "at",
+"name": "Österreich",
+"hauptstadt": "Wien",
+"region": "Mitteleuropa",
+"commons": "Flag of Austria.svg",
+"wiki": "Flagge Österreichs",
+"aehnlich": [
+"lv",
+"pl",
+"mc"
+],
+"bedeutung": "Rot-Weiß-Rot sind die Farben der Babenberger. Der Legende nach war der Waffenrock von Herzog Leopold V. nach einer Schlacht blutrot, nur unter dem Gürtel blieb er weiß.",
+"esel": "Rot, Weiß, Rot wie der Waffenrock aus der Legende. Lettland ist dunkler und der weiße Streifen schmaler."
+},
+{
+"iso": "nl",
+"name": "Niederlande",
+"hauptstadt": "Amsterdam",
+"region": "Westeuropa",
+"commons": "Flag of the Netherlands.svg",
+"wiki": "Flagge der Niederlande",
+"aehnlich": [
+"lu",
+"fr",
+"ru"
+],
+"bedeutung": "Sie gilt als eine der ältesten Trikoloren. Sie stammt von der Prinzenflagge in Orange-Weiß-Blau ab, aus der Zeit des Aufstands unter Wilhelm von Oranien.",
+"esel": "Dunkelblau unten. Luxemburg hat das hellere Blau."
+},
+{
+"iso": "be",
+"name": "Belgien",
+"hauptstadt": "Brüssel",
+"region": "Westeuropa",
+"commons": "Flag of Belgium (civil).svg",
+"wiki": "Flagge Belgiens",
+"aehnlich": [
+"de",
+"ro",
+"it"
+],
+"bedeutung": "Schwarz, Gelb und Rot stammen aus dem Wappen des Herzogtums Brabant. Die Flagge entstand mit der Belgischen Revolution 1830.",
+"esel": "Deutschland, um 90 Grad gedreht und mit Schwarz am Mast."
+},
+{
+"iso": "pl",
+"name": "Polen",
+"hauptstadt": "Warschau",
+"region": "Mitteleuropa",
+"commons": "Flag of Poland.svg",
+"wiki": "Flagge Polens",
+"aehnlich": [
+"mc",
+"mt",
+"at"
+],
+"bedeutung": "Weiß und Rot kommen aus dem Wappen: ein weißer Adler auf rotem Grund.",
+"esel": "Polen hat Weiß oben wie Schnee über rotem Grund. Monaco ist genau umgekehrt."
+},
+{
+"iso": "se",
+"name": "Schweden",
+"hauptstadt": "Stockholm",
+"region": "Nordeuropa",
+"commons": "Flag of Sweden.svg",
+"wiki": "Flagge Schwedens",
+"aehnlich": [
+"fi",
+"ua",
+"dk"
+],
+"bedeutung": "Das gelbe Kreuz auf Blau ist ein skandinavisches Kreuz. Die Farben werden aus dem schwedischen Staatswappen abgeleitet.",
+"esel": "Die einzige gelb-blaue Flagge mit Kreuz in Europa."
+},
+{
+"iso": "gr",
+"name": "Griechenland",
+"hauptstadt": "Athen",
+"region": "Südeuropa",
+"commons": "Flag of Greece.svg",
+"wiki": "Flagge Griechenlands",
+"aehnlich": [
+"fi",
+"si",
+"sm"
+],
+"bedeutung": "Das Kreuz steht für den orthodoxen Glauben. Die neun Streifen werden oft auf die neun Silben des griechischen Rufs für „Freiheit oder Tod“ bezogen.",
+"esel": "Blau und Weiß wie Ägäis und weiße Häuser, dazu neun Streifen."
+},
+{
+"iso": "ie",
+"name": "Irland",
+"hauptstadt": "Dublin",
+"region": "Westeuropa",
+"commons": "Flag of Ireland.svg",
+"wiki": "Flagge Irlands",
+"aehnlich": [
+"it",
+"hu",
+"bg"
+],
+"bedeutung": "Grün steht für die katholische Bevölkerung, Orange für die protestantische und Weiß für den Frieden zwischen beiden.",
+"esel": "Italien endet rot wie Tomate, Irland endet orange."
+},
+{
+"iso": "dk",
+"name": "Dänemark",
+"hauptstadt": "Kopenhagen",
+"region": "Nordeuropa",
+"commons": "Flag of Denmark.svg",
+"wiki": "Flagge Dänemarks",
+"aehnlich": [
+"ch",
+"no",
+"se"
+],
+"bedeutung": "Der Dannebrog gilt als älteste durchgehend genutzte Staatsflagge der Welt. Der Legende nach fiel er 1219 während einer Schlacht vom Himmel.",
+"esel": "Das Original unter den nordischen Kreuzen: nur Weiß auf Rot."
+},
+{
+"iso": "no",
+"name": "Norwegen",
+"hauptstadt": "Oslo",
+"region": "Nordeuropa",
+"commons": "Flag of Norway.svg",
+"wiki": "Flagge Norwegens",
+"aehnlich": [
+"is",
+"dk",
+"fi"
+],
+"bedeutung": "Fredrik Meltzer entwarf sie 1821. Rot, Weiß und Blau gelten als Farben der Freiheit, wie bei Frankreich, Großbritannien und den USA.",
+"esel": "Roter Grund. Island hat dieselben Farben, aber blauen Grund."
+},
+{
+"iso": "pt",
+"name": "Portugal",
+"hauptstadt": "Lissabon",
+"region": "Südeuropa",
+"commons": "Flag of Portugal.svg",
+"wiki": "Flagge Portugals",
+"aehnlich": [
+"es",
+"by",
+"it"
+],
+"bedeutung": "Die Flagge von 1911 zeigt eine Armillarsphäre, ein altes Instrument der Astronomie, das an die Zeit der Seefahrer erinnert. Dazu kommt das Wappen.",
+"esel": "Grün am Mast, Rot am Rest und ein Globus-Instrument für die Seefahrernation."
+},
+{
+"iso": "ua",
+"name": "Ukraine",
+"hauptstadt": "Kiew",
+"region": "Osteuropa",
+"commons": "Flag of Ukraine.svg",
+"wiki": "Flagge der Ukraine",
+"aehnlich": [
+"se",
+"ro",
+"lu"
+],
+"bedeutung": "Blau und Gelb werden meist als Himmel über Weizenfeldern gedeutet.",
+"esel": "Stell dir die Landschaft vor: oben Himmel, unten Weizen."
+},
+{
+"iso": "ru",
+"name": "Russland",
+"hauptstadt": "Moskau",
+"region": "Osteuropa",
+"commons": "Flag of Russia.svg",
+"wiki": "Flagge Russlands",
+"aehnlich": [
+"si",
+"sk",
+"rs"
+],
+"bedeutung": "Die Trikolore geht auf die Zeit Peters des Großen zurück. Weiß, Blau und Rot wurden zum Vorbild für viele slawische Flaggen.",
+"esel": "Die Vorlage ganz ohne Wappen. Slowakei und Slowenien haben dasselbe mit Wappen.",
+"hinweis": "Der größte Teil der Landfläche liegt in Asien, Hauptstadt und die meisten Einwohner aber in Europa."
+},
+{
+"iso": "fi",
+"name": "Finnland",
+"hauptstadt": "Helsinki",
+"region": "Nordeuropa",
+"commons": "Flag of Finland.svg",
+"wiki": "Flagge Finnlands",
+"aehnlich": [
+"se",
+"is",
+"gr"
+],
+"bedeutung": "Das blaue Kreuz auf Weiß wird oft als Bild für die Seen und den Schnee des Landes gedeutet.",
+"esel": "Blaue Seen im weißen Schnee."
+},
+{
+"iso": "hu",
+"name": "Ungarn",
+"hauptstadt": "Budapest",
+"region": "Mitteleuropa",
+"commons": "Flag of Hungary.svg",
+"wiki": "Flagge Ungarns",
+"aehnlich": [
+"it",
+"bg",
+"ie"
+],
+"bedeutung": "Rot, Weiß und Grün stammen aus dem ungarischen Wappen. Die Trikolore wurde in der Revolution von 1848 wichtig.",
+"esel": "Italiens Farben, aber waagerecht und mit Rot oben."
+},
+{
+"iso": "cz",
+"name": "Tschechien",
+"hauptstadt": "Prag",
+"region": "Mitteleuropa",
+"commons": "Flag of the Czech Republic.svg",
+"wiki": "Flagge Tschechiens",
+"aehnlich": [
+"sk",
+"pl",
+"ru"
+],
+"bedeutung": "Weiß und Rot sind die Farben Böhmens. Der blaue Keil kam 1920 mit der Tschechoslowakei dazu, nach deren Teilung 1993 behielt Tschechien die Flagge.",
+"esel": "Polen mit einem blauen Keil."
+},
+{
+"iso": "ro",
+"name": "Rumänien",
+"hauptstadt": "Bukarest",
+"region": "Südosteuropa",
+"commons": "Flag of Romania.svg",
+"wiki": "Flagge Rumäniens",
+"aehnlich": [
+"md",
+"ad",
+"be"
+],
+"bedeutung": "Blau, Gelb und Rot sind seit dem 19. Jahrhundert die Farben Rumäniens. Sie ist der Flagge des Tschad fast zum Verwechseln ähnlich.",
+"esel": "Die Schlichte unter drei Geschwistern: Moldau und Andorra tragen ein Wappen, Rumänien nicht."
+},
+{
+"iso": "hr",
+"name": "Kroatien",
+"hauptstadt": "Zagreb",
+"region": "Südosteuropa",
+"commons": "Flag of Croatia.svg",
+"wiki": "Flagge Kroatiens",
+"aehnlich": [
+"rs",
+"si",
+"sk"
+],
+"bedeutung": "In der Mitte steht das rot-weiße Schachbrett, das Wappen Kroatiens. Darüber zeigt eine Krone Wappen historischer Regionen.",
+"esel": "Rot oben und das Schachbrett wie auf den Trikots der Fußball-Nationalmannschaft."
+},
+{
+"iso": "is",
+"name": "Island",
+"hauptstadt": "Reykjavík",
+"region": "Nordeuropa",
+"commons": "Flag of Iceland.svg",
+"wiki": "Flagge Islands",
+"aehnlich": [
+"no",
+"fi",
+"gb"
+],
+"bedeutung": "Blau steht für den Atlantik und den Himmel über Island, Weiß für Eis und Gletscher, Rot für das Feuer der Vulkane.",
+"esel": "Feuer und Eis auf blauem Meer: Norwegen mit getauschten Farben."
+},
+{
+"iso": "ee",
+"name": "Estland",
+"hauptstadt": "Tallinn",
+"region": "Nordeuropa",
+"commons": "Flag of Estonia.svg",
+"wiki": "Flagge Estlands",
+"aehnlich": [
+"de",
+"lt",
+"fi"
+],
+"bedeutung": "Blau, Schwarz und Weiß waren zuerst die Farben einer estnischen Studentenverbindung aus Tartu, geweiht 1884.",
+"esel": "Himmel, Erde, Schnee, von oben nach unten."
+},
+{
+"iso": "lv",
+"name": "Lettland",
+"hauptstadt": "Riga",
+"region": "Nordeuropa",
+"commons": "Flag of Latvia.svg",
+"wiki": "Flagge Lettlands",
+"aehnlich": [
+"at",
+"ee",
+"lt"
+],
+"bedeutung": "Ein rot-weiß-rotes Banner wird schon in der Livländischen Reimchronik zum Jahr 1279 erwähnt. Die heutige Flagge entwarf der Künstler Ansis Cīrulis 1917 auf dieser Grundlage.",
+"esel": "Österreich in Dunkelrot, mit schmalem Weiß."
+},
+{
+"iso": "lt",
+"name": "Litauen",
+"hauptstadt": "Vilnius",
+"region": "Nordeuropa",
+"commons": "Flag of Lithuania.svg",
+"wiki": "Flagge Litauens",
+"aehnlich": [
+"bg",
+"ee",
+"hu"
+],
+"bedeutung": "Gelb steht für die Sonne, Grün für die Natur und Rot für Mut und vergossenes Blut.",
+"esel": "Sonne über Wald über Blut, von oben nach unten."
+},
+{
+"iso": "bg",
+"name": "Bulgarien",
+"hauptstadt": "Sofia",
+"region": "Südosteuropa",
+"commons": "Flag of Bulgaria.svg",
+"wiki": "Flagge Bulgariens",
+"aehnlich": [
+"hu",
+"lt",
+"it"
+],
+"bedeutung": "Weiß steht für Freiheit und Frieden, Grün für die Natur des Landes und Rot für das im Freiheitskampf vergossene Blut.",
+"esel": "Ungarn von oben nach unten vertauscht: Weiß zuerst, Rot zuletzt."
+},
+{
+"iso": "sk",
+"name": "Slowakei",
+"hauptstadt": "Bratislava",
+"region": "Mitteleuropa",
+"commons": "Flag of Slovakia.svg",
+"wiki": "Flagge der Slowakei",
+"aehnlich": [
+"si",
+"ru",
+"rs"
+],
+"bedeutung": "Das Wappen zeigt ein weißes Doppelkreuz auf drei blauen Hügeln, die oft auf die Tatra, Matra und Fatra bezogen werden.",
+"esel": "Doppelkreuz und drei Hügel. Das Wappen ist viel größer als bei Slowenien."
+},
+{
+"iso": "si",
+"name": "Slowenien",
+"hauptstadt": "Ljubljana",
+"region": "Mitteleuropa",
+"commons": "Flag of Slovenia.svg",
+"wiki": "Flagge Sloweniens",
+"aehnlich": [
+"sk",
+"ru",
+"hr"
+],
+"bedeutung": "Das kleine Wappen links oben zeigt den Triglav, den höchsten Berg des Landes, darüber drei Sterne.",
+"esel": "Kleines Wappen oben links, darin der Berg Triglav."
+},
+{
+"iso": "rs",
+"name": "Serbien",
+"hauptstadt": "Belgrad",
+"region": "Südosteuropa",
+"commons": "Flag of Serbia.svg",
+"wiki": "Flagge Serbiens",
+"aehnlich": [
+"ru",
+"sk",
+"hr"
+],
+"bedeutung": "Rot, Blau und Weiß sind die russischen Farben in umgekehrter Reihenfolge. Das Wappen zeigt einen weißen Doppeladler.",
+"esel": "Russland auf dem Kopf, dazu ein Doppeladler."
+},
+{
+"iso": "ba",
+"name": "Bosnien und Herzegowina",
+"hauptstadt": "Sarajevo",
+"region": "Südosteuropa",
+"commons": "Flag of Bosnia and Herzegovina.svg",
+"wiki": "Flagge von Bosnien und Herzegowina",
+"aehnlich": [
+"xk",
+"ua",
+"se"
+],
+"bedeutung": "Das gelbe Dreieck steht für die drei größten Volksgruppen und erinnert an die Form des Landes. Blau und die Sterne verweisen auf Europa.",
+"esel": "Dreieck für drei Völker, Sterne wie bei der EU."
+},
+{
+"iso": "al",
+"name": "Albanien",
+"hauptstadt": "Tirana",
+"region": "Südosteuropa",
+"commons": "Flag of Albania.svg",
+"wiki": "Flagge Albaniens",
+"aehnlich": [
+"me",
+"rs",
+"mk"
+],
+"bedeutung": "Der schwarze Doppeladler auf Rot geht auf das Banner von Skanderbeg zurück, dem albanischen Nationalhelden des 15. Jahrhunderts.",
+"esel": "In der eigenen Sprache heißt das Land Shqipëria, oft gedeutet als „Land der Adler“."
+},
+{
+"iso": "me",
+"name": "Montenegro",
+"hauptstadt": "Podgorica",
+"region": "Südosteuropa",
+"commons": "Flag of Montenegro.svg",
+"wiki": "Flagge Montenegros",
+"aehnlich": [
+"al",
+"mk",
+"rs"
+],
+"bedeutung": "Roter Grund, goldener Rand und ein goldener Doppeladler mit Löwe auf der Brust. Die heutige Form gilt seit 2004.",
+"esel": "Albaniens Adler trägt Schwarz ohne Rand, Montenegros Adler ist golden und hat einen goldenen Rahmen."
+},
+{
+"iso": "mk",
+"name": "Nordmazedonien",
+"hauptstadt": "Skopje",
+"region": "Südosteuropa",
+"commons": "Flag of North Macedonia.svg",
+"wiki": "Flagge Nordmazedoniens",
+"aehnlich": [
+"me",
+"al",
+"mt"
+],
+"bedeutung": "Die gelbe Sonne mit acht Strahlen gibt es seit 1995. Damals wurde die frühere Flagge wegen eines Streits mit Griechenland ersetzt.",
+"esel": "Einfach eine aufgehende Sonne auf Rot, einzigartig in Europa."
+},
+{
+"iso": "xk",
+"name": "Kosovo",
+"hauptstadt": "Pristina",
+"region": "Südosteuropa",
+"commons": "Flag of Kosovo.svg",
+"wiki": "Flagge des Kosovo",
+"aehnlich": [
+"ba",
+"cy",
+"se"
+],
+"bedeutung": "Die Flagge von 2008 zeigt den Umriss des Landes in Gold auf Blau und sechs Sterne, oft gedeutet als die Volksgruppen im Land.",
+"esel": "Neben Zypern die zweite europäische Flagge mit dem eigenen Landesumriss.",
+"hinweis": "Kosovo erklärte sich 2008 für unabhängig. Viele Staaten erkennen das an, andere wie Serbien nicht, und es ist kein UN-Mitglied."
+},
+{
+"iso": "md",
+"name": "Moldau",
+"hauptstadt": "Chișinău",
+"region": "Osteuropa",
+"commons": "Flag of Moldova.svg",
+"wiki": "Flagge der Republik Moldau",
+"aehnlich": [
+"ro",
+"ad",
+"es"
+],
+"bedeutung": "Die Farben teilt sie mit Rumänien, mit dem das Land historisch eng verbunden ist. Dazu kommt das Wappen mit Adler und Auerochsenkopf.",
+"esel": "Rumänien plus Adler."
+},
+{
+"iso": "by",
+"name": "Belarus",
+"hauptstadt": "Minsk",
+"region": "Osteuropa",
+"commons": "Flag of Belarus.svg",
+"wiki": "Flagge von Belarus",
+"aehnlich": [
+"pt",
+"bg",
+"hu"
+],
+"bedeutung": "Die Flagge wurde 1995 nach einem Referendum eingeführt und ähnelt der aus Sowjetzeiten. Am Rand läuft ein rot-weißes Ornament.",
+"esel": "Rot über Grün mit gewebtem Muster am Mast."
+},
+{
+"iso": "lu",
+"name": "Luxemburg",
+"hauptstadt": "Luxemburg",
+"region": "Westeuropa",
+"commons": "Flag of Luxembourg.svg",
+"wiki": "Flagge Luxemburgs",
+"aehnlich": [
+"nl",
+"fr",
+"ru"
+],
+"bedeutung": "Die Farben kommen aus dem Wappen des Hauses Luxemburg. Das hellere Blau unterscheidet sie von den Niederlanden.",
+"esel": "L wie Luxemburg, L wie Light Blue."
+},
+{
+"iso": "mt",
+"name": "Malta",
+"hauptstadt": "Valletta",
+"region": "Südeuropa",
+"commons": "Flag of Malta.svg",
+"wiki": "Flagge Maltas",
+"aehnlich": [
+"pl",
+"mc",
+"ch"
+],
+"bedeutung": "Oben links ist das Georgskreuz abgebildet. König Georg VI. verlieh es 1942 der ganzen Insel für ihr Standhalten im Zweiten Weltkrieg.",
+"esel": "Senkrecht Weiß und Rot, dazu ein Orden in der Ecke."
+},
+{
+"iso": "cy",
+"name": "Zypern",
+"hauptstadt": "Nikosia",
+"region": "Südeuropa",
+"commons": "Flag of Cyprus.svg",
+"wiki": "Flagge der Republik Zypern",
+"aehnlich": [
+"xk",
+"ba",
+"sm"
+],
+"bedeutung": "Sie zeigt die ganze Insel in Kupferfarbe, denn Kupfer spielte für Zypern lange eine große Rolle. Die Olivenzweige stehen für den Frieden zwischen den Volksgruppen.",
+"esel": "Kupferfarbene Insel, das Wort Kupfer leitet sich sogar von Zypern ab.",
+"hinweis": "Geografisch liegt Zypern in Asien, politisch gehört es als EU-Mitglied zu Europa. Der Norden der Insel steht nicht unter Kontrolle der Regierung."
+},
+{
+"iso": "li",
+"name": "Liechtenstein",
+"hauptstadt": "Vaduz",
+"region": "Mitteleuropa",
+"commons": "Flag of Liechtenstein.svg",
+"wiki": "Flagge Liechtensteins",
+"aehnlich": [
+"ad",
+"lu",
+"nl"
+],
+"bedeutung": "Bei den Olympischen Spielen 1936 fiel auf, dass die Flagge mit der von Haiti identisch war. Darum kam 1937 die goldene Krone dazu.",
+"esel": "Blau-Rot mit Krone, weil das Land ein Fürstentum ist."
+},
+{
+"iso": "ad",
+"name": "Andorra",
+"hauptstadt": "Andorra la Vella",
+"region": "Südeuropa",
+"commons": "Flag of Andorra.svg",
+"wiki": "Flagge Andorras",
+"aehnlich": [
+"ro",
+"md",
+"es"
+],
+"bedeutung": "Blau, Gelb und Rot werden oft als Verbindung der Farben Frankreichs und Spaniens gedeutet, den Nachbarn des Landes. Das Wappen sitzt in der Mitte.",
+"esel": "Liegt zwischen Frankreich und Spanien, und das Wappen steht ebenfalls in der Mitte."
+},
+{
+"iso": "mc",
+"name": "Monaco",
+"hauptstadt": "Monaco",
+"region": "Westeuropa",
+"commons": "Flag of Monaco.svg",
+"wiki": "Flagge Monacos",
+"aehnlich": [
+"pl",
+"mt",
+"at"
+],
+"bedeutung": "Rot und Weiß sind die Farben der Fürstenfamilie Grimaldi. Fast gleich sieht die Flagge Indonesiens aus, nur die Proportionen unterscheiden sich.",
+"esel": "Monaco: Rot oben wie ein roter Formel-1-Wagen. Polen ist die Umkehrung."
+},
+{
+"iso": "sm",
+"name": "San Marino",
+"hauptstadt": "San Marino",
+"region": "Südeuropa",
+"commons": "Flag of San Marino.svg",
+"wiki": "Flagge San Marinos",
+"aehnlich": [
+"va",
+"gr",
+"fi"
+],
+"bedeutung": "Weiß und Hellblau werden oft als Wolken und Himmel gedeutet. Das Wappen zeigt die drei Türme auf dem Monte Titano.",
+"esel": "Weiß und Blau mit den drei Türmen, die auch auf dem Berg stehen."
+},
+{
+"iso": "va",
+"name": "Vatikanstadt",
+"hauptstadt": "Vatikanstadt",
+"region": "Südeuropa",
+"commons": "Flag of Vatican City.svg",
+"wiki": "Flagge der Vatikanstadt",
+"aehnlich": [
+"sm",
+"ch",
+"ua"
+],
+"bedeutung": "Gelb und Weiß sind die Farben des Papsttums, dazu die Schlüssel des Petrus und die Tiara. Neben der Schweiz ist es die einzige quadratische Staatsflagge.",
+"esel": "Goldene und silberne Schlüssel auf Gelb und Weiß.",
+"hinweis": "Der Heilige Stuhl ist bei den Vereinten Nationen Beobachter, kein Mitglied."
+}
+]

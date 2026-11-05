@@ -18,9 +18,9 @@ const feed = $("feed");
 function laden() {
   try {
     const s = JSON.parse(localStorage.getItem(SPEICHER));
-    if (s && Array.isArray(s.merk) && s.gesehen) return s;
+    if (s && Array.isArray(s.merk) && s.gesehen) return { flaggen: {}, ...s };
   } catch (e) { /* privat oder gesperrt: dann ohne Speicher */ }
-  return { merk: [], gesehen: {} };
+  return { merk: [], gesehen: {}, flaggen: {} };
 }
 const zustand = laden();
 function sichern() {
@@ -136,7 +136,12 @@ function endeBauen(anzahl) {
 
 function feedZeigen() {
   const auswahl = thema === "alle" ? alleKarten : alleKarten.filter((k) => k.kat === thema);
-  feed.replaceChildren(...reihenfolge(auswahl).map(karteBauen), endeBauen(auswahl.length));
+  const karten = reihenfolge(auswahl).map(karteBauen);
+  // Im gemischten Feed unterbricht etwa jede fünfte Karte das reine Lesen mit einer Frage.
+  if (thema === "alle") {
+    flFeedKarten(Math.floor(karten.length / 5)).forEach((f, i) => karten.splice((i + 1) * 5 + i, 0, f));
+  }
+  feed.replaceChildren(...karten, endeBauen(auswahl.length));
   feed.scrollTop = 0;
   feed.querySelectorAll(".karte[data-id]").forEach((n) => beobachter.observe(n));
 }
@@ -211,10 +216,12 @@ function bereich(name) {
   const istFeed = name === "feed";
   feed.hidden = !istFeed;
   $("kopf").hidden = !istFeed;
-  $("merkliste").hidden = istFeed;
-  $("tab-feed").classList.toggle("aktiv", istFeed);
-  $("tab-merk").classList.toggle("aktiv", !istFeed);
-  if (istFeed) feedZeigen(); else merklisteZeigen();
+  $("merkliste").hidden = name !== "merk";
+  $("flaggen").hidden = name !== "flaggen";
+  for (const n of ["feed", "flaggen", "merk"]) $("tab-" + n).classList.toggle("aktiv", n === name);
+  if (istFeed) feedZeigen();
+  else if (name === "merk") merklisteZeigen();
+  else flUebersicht();
 }
 
 // ---------- Start ----------
@@ -235,10 +242,15 @@ async function start() {
   chipsBauen();
   $("tab-feed").addEventListener("click", () => bereich("feed"));
   $("tab-merk").addEventListener("click", () => bereich("merk"));
+  $("tab-flaggen").addEventListener("click", () => bereich("flaggen"));
   $("blatt-zu").addEventListener("click", () => $("blatt").close());
   $("blatt").addEventListener("click", (e) => { if (e.target === $("blatt")) $("blatt").close(); });
   try {
-    const r = await fetch("inhalte.json", { cache: "no-cache" });
+    const [r] = await Promise.all([
+      fetch("inhalte.json", { cache: "no-cache" }),
+      // Ohne Flaggen-Daten bleibt der Feed trotzdem nutzbar.
+      flaggenLaden().catch(() => {}),
+    ]);
     alleKarten = (await r.json()).karten;
     feedZeigen();
   } catch (e) {
