@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Tiefgang</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e0f11">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tiefgang">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="kopf" id="kopf">
+  <nav class="chips" id="chips" aria-label="Themen"></nav>
+</header>
+
+<main class="feed" id="feed" tabindex="-1"></main>
+
+<section class="merkliste" id="merkliste" hidden>
+  <h1>Gespeichert</h1>
+  <p class="bilanz" id="bilanz"></p>
+  <ul class="zeilen" id="zeilen"></ul>
+</section>
+
+<nav class="leiste" aria-label="Bereiche">
+  <button id="tab-feed" class="aktiv" type="button">Entdecken</button>
+  <button id="tab-merk" type="button">Gespeichert</button>
+</nav>
+
+<dialog class="blatt" id="blatt" aria-labelledby="blatt-titel">
+  <button class="zu" id="blatt-zu" type="button" aria-label="Schließen">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+  </button>
+  <div class="blatt-inhalt" id="blatt-inhalt"></div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
