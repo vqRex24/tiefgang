@@ -166,3 +166,27 @@ a { color: inherit; }
   .fl-option { min-height: 46px; padding: 6px 12px; }
   .fl-optionen { gap: 6px; }
 }
+
+/* Quiz */
+.qz-zurueck { min-height: 44px; margin: -10px 0 4px; font-weight: 600; color: var(--flaggen); }
+.qz-decks { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 10px; }
+.qz-deck { display: block; width: 100%; padding: 16px; border-radius: 14px; background: var(--flaeche); text-align: left; }
+.qz-deck strong { display: block; font-family: var(--serif); font-size: 21px; margin-bottom: 2px; }
+.qz-deck-text { display: block; color: var(--leise); font-size: 14px; margin-bottom: 12px; }
+.qz-deck .fl-balken { margin-bottom: 6px; }
+.qz-deck-stand { font-size: 13px; color: var(--leise); }
+.qz-zeilen { list-style: none; margin: 0; padding: 0; }
+.qz-zeile { display: flex; justify-content: space-between; gap: 14px; width: 100%; padding: 12px 0; border-bottom: 1px solid var(--linie); text-align: left; font-size: 15px; line-height: 1.35; }
+.qz-zeile b { flex: none; max-width: 45%; text-align: right; }
+.qz-zeile.unbekannt { color: var(--leise); }
+.qz-zeile.sicher b { color: var(--gut); }
+.qz-hinweis { margin: -4px 0 10px; color: var(--leise); font-size: 14px; }
+.qz-form { display: flex; gap: 8px; }
+.qz-eingabe { flex: 1; min-width: 0; min-height: 52px; padding: 0 14px; border-radius: 10px; border: 2px solid var(--linie); background: var(--flaeche); color: var(--text); font: 600 20px var(--sans); }
+.qz-eingabe:focus { outline: 2px solid var(--flaggen); outline-offset: 1px; }
+.qz-eingabe.richtig { border-color: var(--gut); }
+.qz-eingabe.falsch { border-color: var(--schlecht); }
+.qz-pruefen { flex: none; min-height: 52px; }
+.qz-frage-klein { font-size: 15px !important; color: var(--leise); margin: 0 44px 4px 0 !important; }
+.qz-antwort { margin-top: 0 !important; font-size: 30px !important; }
+.qz-deine { color: var(--schlecht); font-size: 15px !important; }

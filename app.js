@@ -18,9 +18,9 @@ const feed = $("feed");
 function laden() {
   try {
     const s = JSON.parse(localStorage.getItem(SPEICHER));
-    if (s && Array.isArray(s.merk) && s.gesehen) return { flaggen: {}, ...s };
+    if (s && Array.isArray(s.merk) && s.gesehen) return { flaggen: {}, quiz: {}, ...s };
   } catch (e) { /* privat oder gesperrt: dann ohne Speicher */ }
-  return { merk: [], gesehen: {}, flaggen: {} };
+  return { merk: [], gesehen: {}, flaggen: {}, quiz: {} };
 }
 const zustand = laden();
 function sichern() {
@@ -139,7 +139,7 @@ function feedZeigen() {
   const karten = reihenfolge(auswahl).map(karteBauen);
   // Im gemischten Feed unterbricht etwa jede fünfte Karte das reine Lesen mit einer Frage.
   if (thema === "alle") {
-    flFeedKarten(Math.floor(karten.length / 5)).forEach((f, i) => karten.splice((i + 1) * 5 + i, 0, f));
+    feedFragen(Math.floor(karten.length / 5)).forEach((f, i) => karten.splice((i + 1) * 5 + i, 0, f));
   }
   feed.replaceChildren(...karten, endeBauen(auswahl.length));
   feed.scrollTop = 0;
@@ -221,7 +221,7 @@ function bereich(name) {
   for (const n of ["feed", "flaggen", "merk"]) $("tab-" + n).classList.toggle("aktiv", n === name);
   if (istFeed) feedZeigen();
   else if (name === "merk") merklisteZeigen();
-  else flUebersicht();
+  else quizStart();
 }
 
 // ---------- Start ----------
@@ -250,6 +250,7 @@ async function start() {
       fetch("inhalte.json", { cache: "no-cache" }),
       // Ohne Flaggen-Daten bleibt der Feed trotzdem nutzbar.
       flaggenLaden().catch(() => {}),
+      qzLaden().catch(() => {}),
     ]);
     alleKarten = (await r.json()).karten;
     feedZeigen();
