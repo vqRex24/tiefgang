@@ -14,6 +14,12 @@ UA = "WissenApp-Eigenbau/0.1 (private Lern-App)"
 ATLAS = "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-10m.json"
 # Weltbank führt den Vatikan nicht.
 VATIKAN = (882, "Stand 2024")
+# Fläche: Wo die Weltbank für eine Lern-App irreführt (Monaco viel zu groß, Kroatien mit Meer,
+# Frankreich und Norwegen mit Übersee, Serbien mit Kosovo) oder nichts hat, gilt Wikipedia.
+FLAECHE_WIKI = {
+    "mc": "2,08 km²", "va": "0,49 km²", "xk": "10.887 km²", "hr": "56.594 km²",
+    "fr": "551.500 km² (ohne Übersee)", "no": "323.808 km² (ohne Svalbard)", "rs": "77.589 km² (ohne Kosovo)",
+}
 
 # ISO-Kürzel zu Länderkennung im Atlas (ISO-numerisch). Kosovo hat dort keine Kennung.
 NUM = dict(al=8, ad=20, at=40, by=112, be=56, ba=70, bg=100, hr=191, cy=196, cz=203, dk=208, ee=233, fi=246, fr=250,
@@ -42,6 +48,21 @@ def einwohner(laender):
         curl(f"https://api.worldbank.org/v2/country/{codes}/indicator/SP.POP.TOTL?format=json&mrnev=1&per_page=100", datei)
     zeilen = json.loads(datei.read_text())[1]
     return {z["country"]["id"].lower(): (z["value"], z["date"]) for z in zeilen}
+
+
+def flaechen(laender):
+    datei = ROH / "weltbank_flaeche.json"
+    if not datei.exists():
+        codes = ";".join(l["iso"] for l in laender if l["iso"] != "va").upper()
+        curl(f"https://api.worldbank.org/v2/country/{codes}/indicator/AG.SRF.TOTL.K2?format=json&mrnev=1&per_page=100", datei)
+    zeilen = json.loads(datei.read_text())[1]
+    return {z["country"]["id"].lower(): (z["value"], z["date"]) for z in zeilen}
+
+
+def flaeche_text(km2):
+    if km2 >= 1_000_000:
+        return f"rund {km2 / 1_000_000:.1f}".replace(".", ",") + " Mio. km²"
+    return f"{round(km2):,}".replace(",", ".") + " km²"
 
 
 def zahl_text(n):
@@ -222,6 +243,7 @@ def main():
     ROH.mkdir(exist_ok=True)
     laender = json.loads((ROOT / "inhalte" / "laender_europa.json").read_text())
     ew = einwohner(laender)
+    fl = flaechen(laender)
     meta = flaggen(laender)
     karte(laender)
     aus = []
@@ -233,7 +255,13 @@ def main():
             if wert is None:
                 raise SystemExit(f"Keine Einwohnerzahl für {l['iso']}")
             text, quelle = f"{zahl_text(wert)} ({jahr})", f"Einwohner: Weltbank, {jahr}"
-        aus.append({**l, "kontinent": "Europa", "einwohnerText": text, "quelleEinwohner": quelle,
+        if l["iso"] in FLAECHE_WIKI:
+            ftext, fquelle = FLAECHE_WIKI[l["iso"]], "Fläche: Wikipedia"
+        else:
+            km2, fjahr = fl[l["iso"]]
+            ftext, fquelle = flaeche_text(km2), f"Fläche: Weltbank, {fjahr}"
+        aus.append({**l, "kontinent": "Europa", "einwohnerText": text, "quelleEinwohner": f"{quelle}. {fquelle}",
+                    "flaecheText": ftext,
                     "quelle": "https://de.wikipedia.org/wiki/" + urllib.parse.quote(l["wiki"].replace(" ", "_")),
                     "bildUrheber": meta[l["iso"]]["urheber"], "bildLizenz": meta[l["iso"]]["lizenz"]})
     (ROOT / "app" / "flaggen.json").write_text(json.dumps({"laender": aus}, ensure_ascii=False, separators=(",", ":")))
